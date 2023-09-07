@@ -1,9 +1,10 @@
 {
-  "name": "chat_app",
+  "name": "Notes_website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "postinstall": "prisma generate",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
