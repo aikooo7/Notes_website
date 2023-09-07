@@ -1,25 +1,24 @@
-import { sql } from '@vercel/postgres';
-import { NextResponse } from 'next/server';
+import { PrismaClient } from '@prisma/client'
+import prisma from '../../../lib/prisma'
 
-async function GetNote(NoteId: string) {
-  try {
-    const res = await sql`SELECT * from users`
-    return NextResponse.json({ res }, { status: 200 }).json()
-  } catch(error) {
-    return NextResponse.json({ error }, {status: 500}).json()
+async function GetNote(NoteId: number) {
+  const notes = await prisma.notes.findUnique({
+    where: {id: NoteId},
+  });
+  return notes
 }
-}
-
-export default async function IdPage({ params }: any) {
-    let note = await GetNote(params.id);
+export default async function NotePage({params}: any) {
+  const note = await GetNote(parseInt(params.id));
+  const formattedDate = new Date(note.createdAt).toLocaleDateString();
   return (
     <div>
-      <h1>Note: {note}</h1>
+      <h1>Note: {note.title}</h1>
       <div>
-      <h2>{note.title}</h2>
-        <h3>{note.content}</h3>
-        <p>{note.created}</p>
+        <h3>{note.title}</h3>
+        <h5>{note.notes_content}</h5>
+        <p>{formattedDate}</p>
+        <p className="credits">Done by aikooo7, <a href="https://github.com/aikooo7">github.</a></p>
       </div>
     </div>
-  );
+  )
 }
