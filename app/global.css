@@ -41,10 +41,20 @@ a {
     cursor: pointer;
   }
   
-  nav a {
+nav  {
     font-weight: bold;
     margin: 0 0.5rem;
     text-decoration: underline;
+    position: fixed;
+    top: 23px;
+  }
+nav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
   }
 
 h1 {
@@ -54,4 +64,22 @@ h1 {
 .NotesWelcome {
   text-align: center;
   color: white;
+}
+
+.credits {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 30px;
+}
+
+h5 {
+  font-size: 20px;
 }
