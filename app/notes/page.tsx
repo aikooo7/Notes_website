@@ -16,7 +16,7 @@ export default async function Notes() {
           <li>No notes found</li>
         )}
         </div>
-        <p className="credits">Done by aikooo7, <a href="https://github.com/aikooo7?tab=repositories">github.</a></p>
+        <p className="credits">Done by aikooo7, <a href="https://github.com/aikooo7">github.</a></p>
     </div>
   );
 }
