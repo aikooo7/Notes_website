@@ -17,18 +17,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}
-      <main>
-        <nav>
-          <Link href="/">
-            Home
-          </Link>
-          <Link href="/notes">
-            Notes
-          </Link>
-        </nav>
-      </main>
+      <body className={inter.className}>
+        {children}
+        <main>
+          <nav>
+            <Link href="/">Home</Link>
+            <Link href="/notes">Notes</Link>
+          </nav>
+        </main>
+        <p className="credits">
+          Done by aikooo7, <a href="https://github.com/aikooo7">github.</a>
+        </p>
       </body>
     </html>
-  )
+  );
 }
