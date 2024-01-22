@@ -21,6 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <main>
+          <SpeedInsights />
           <nav>
             <Link href="/">Home</Link>
             <Link href="/notes">Notes</Link>
