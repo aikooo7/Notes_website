@@ -7,16 +7,17 @@ export default async function Notes() {
   return (
     <div>
       <h1>Notes</h1>
-      <div>
-      {notes && notes.length > 0 ? (
-          notes.map((note : any) => (
-            <Note key={note.id} note={note} />
-          ))
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "auto auto auto",
+        }}
+      >
         ) : (
           <li>No notes found</li>
         )}
-        </div>
-        <p className="credits">Done by aikooo7, <a href="https://github.com/aikooo7">github.</a></p>
+      </div>
+      <CreateNote />
     </div>
   );
 }
