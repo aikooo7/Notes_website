@@ -90,3 +90,9 @@ h3 {
 h5 {
   font-size: 20px;
 }
+
+.NoteDiv {
+  text-align: center;
+  display: block;
+  margin: 1.5em auto 0.5em auto;
+}
