@@ -14,6 +14,14 @@ a {
     padding: 0;
     margin: 0;
   }
+
+a:link {
+  color: purple 
+}
+
+a:visited {
+  color: purple
+}
   
   main {
     min-height: 100vh;
