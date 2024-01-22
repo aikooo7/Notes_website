@@ -17,7 +17,6 @@ export default async function NotePage({params}: any) {
         <h3>{note.title}</h3>
         <h5>{note.notes_content}</h5>
         <p>{formattedDate}</p>
-        <p className="credits">Done by aikooo7, <a href="https://github.com/aikooo7">github.</a></p>
       </div>
     </div>
   )
