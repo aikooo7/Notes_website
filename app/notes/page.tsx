@@ -33,7 +33,11 @@ function Note({ note }: any) {
         color: "orange",
       }}
     >
+      <div>
+        <h3>{title}</h3>
+        <h5>{notes_content}</h5>
+        <p>{formattedDate}</p>
+      </div>
     </Link>
   );
-
 }
