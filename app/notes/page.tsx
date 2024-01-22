@@ -27,12 +27,12 @@ function Note({ note }: any) {
   const formattedDate = new Date(note.createdAt).toLocaleDateString();
 
   return (
-    <Link href={`/notes/${id}`}>
-    <div>
-      <h3>{title}</h3>
-      <h5>{notes_content}</h5>
-      <p>{formattedDate}</p>
-    </div>
+    <Link
+      href={`/notes/${id}`}
+      style={{
+        color: "orange",
+      }}
+    >
     </Link>
   );
 
