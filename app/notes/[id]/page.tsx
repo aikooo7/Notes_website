@@ -3,11 +3,13 @@ import prisma from '../../../lib/prisma'
 
 async function GetNote(NoteId: number) {
   const notes = await prisma.notes.findUnique({
-    where: {id: NoteId},
+    where: {
+      id: NoteId,
+    },
   });
-  return notes
+  return notes;
 }
-export default async function NotePage({params}: any) {
+export default async function NotePage({ params }: any) {
   const note = await GetNote(parseInt(params.id));
   const formattedDate = new Date(note.createdAt).toLocaleDateString();
   return (
@@ -19,5 +21,5 @@ export default async function NotePage({params}: any) {
         <p>{formattedDate}</p>
       </div>
     </div>
-  )
+  );
 }
